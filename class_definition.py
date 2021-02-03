@@ -28,9 +28,14 @@ class No_fly_zone:  # 禁飞区信息
         self.x = x
         self.y = y
 
-    # 判断是否路过禁飞区
+    # 判断线段是否路过某区域
     # https://blog.csdn.net/qq_39627843/article/details/81170316?utm_medium=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase
     def across_no_fly_zone(self, current, neighbour):
+        '''
+        :param current: 无人机当前位置节点
+        :param neighbour: 无人机的下一目标位置
+        :return: 若没有穿过禁飞区，返回False;若穿过了禁飞区，返回该禁飞区id
+        '''
         across = False
 
         def cmulplify (A, B, C):  # 叉乘
@@ -52,6 +57,12 @@ class No_fly_zone:  # 禁飞区信息
         return False
 
     def mid_point(self, uav, nearest_neighbour):
+        '''
+
+        :param uav: 无人机当前位置
+        :param nearest_neighbour:无人机下一目标位置
+        :return: 禁飞区中能够绕飞的、路径最短的顶点
+        '''
         mid_point_distance = Infinite
         mid_point = []
 

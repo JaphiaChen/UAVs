@@ -5,6 +5,12 @@ Infinite = float('inf')
 
 
 def astar (uav, task_list, no_fly_zones):
+    '''
+    :param uav:无人机类的单个实例
+    :param task_list: 该无人机的任务列表位置信息
+    :param no_fly_zones: 禁飞区类的实例列表
+    :return: 单无人机路径经过节点
+    '''
     path = []
     heappush(path, uav.position)  # 把首节点压入栈中
     while task_list:    # 还有待完成的任务

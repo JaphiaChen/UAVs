@@ -6,6 +6,12 @@ from class_definition import No_fly_zone
 
 
 def solve_info(in_stream1,in_stream2):
+    '''
+
+    :param in_stream1: UAVs和禁飞区的位置信息
+    :param in_stream2: 目标任务分配结果信息
+    :return: 无人机类的实例列表和禁飞区类的实例列表
+    '''
     uavs = {}
     no_fly_zones = {}
 

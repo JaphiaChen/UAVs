@@ -6,6 +6,11 @@ def heuristic_cost_estimate(current, task):   # 启发式距离：从当前点�
 
 
 def distance_between(n1, n2):     # 计算距离
+    '''
+    :param n1:点1
+    :param n2: 点2
+    :return: 点1到点2的欧式距离
+    '''
     latA, longA = n1
     latB, longB = n2
 
